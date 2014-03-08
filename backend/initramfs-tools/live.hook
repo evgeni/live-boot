@@ -136,6 +136,11 @@ manual_add_modules sr_mod
 # Hardware: usb
 manual_add_modules sd_mod
 
+# Hardware: kernel mode setting
+for module in i915 radeon nouveau ; do
+	manual_add_modules $module
+done
+
 # Hardware: network
 auto_add_modules net
 
